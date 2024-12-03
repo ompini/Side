@@ -31,12 +31,14 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 
-# set vars
+**set vars**
+```
 echo "export WALLET="wallet"" >> $HOME/.bash_profile
 echo "export MONIKER="test"" >> $HOME/.bash_profile
 echo "export SIDE_CHAIN_ID="sidechain-testnet-4"" >> $HOME/.bash_profile
 echo "export SIDE_PORT="45"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
+```
 
 # download binary
 cd $HOME
