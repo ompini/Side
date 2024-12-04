@@ -8,15 +8,6 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 ```
 
-Node Name
-Wallet
-Port
-45
-Pruning
-Pruning Keep Recent
-100
-Pruning Interval
-19
 **install go, if needed**
 ```
 cd $HOME
@@ -40,13 +31,15 @@ echo "export SIDE_PORT="45"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 rm -rf side
 git clone https://github.com/sideprotocol/side.git
 cd side
 git checkout v0.9.5
 make install
+```
 
 # config and init app
 sided config node tcp://localhost:${SIDE_PORT}657
