@@ -41,11 +41,13 @@ git checkout v0.9.5
 make install
 ```
 
-# config and init app
+**config and init app**
+```
 sided config node tcp://localhost:${SIDE_PORT}657
 sided config keyring-backend os
 sided config chain-id sidechain-testnet-4
 sided init "test" --chain-id sidechain-testnet-4
+```
 
 # download genesis and addrbook
 wget -O $HOME/.side/config/genesis.json https://server-5.itrocket.net/testnet/side/genesis.json
