@@ -49,9 +49,11 @@ sided config chain-id sidechain-testnet-4
 sided init "test" --chain-id sidechain-testnet-4
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.side/config/genesis.json https://server-5.itrocket.net/testnet/side/genesis.json
 wget -O $HOME/.side/config/addrbook.json  https://server-5.itrocket.net/testnet/side/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="9c14080752bdfa33f4624f83cd155e2d3976e303@side-testnet-seed.itrocket.net:45656"
