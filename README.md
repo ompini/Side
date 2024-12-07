@@ -63,7 +63,8 @@ sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.side/config/config.toml
 ```
 
-# set custom ports in app.toml
+**set custom ports in app.toml**
+```
 sed -i.bak -e "s%:1317%:${SIDE_PORT}317%g;
 s%:8080%:${SIDE_PORT}080%g;
 s%:9090%:${SIDE_PORT}090%g;
@@ -71,6 +72,7 @@ s%:9091%:${SIDE_PORT}091%g;
 s%:8545%:${SIDE_PORT}545%g;
 s%:8546%:${SIDE_PORT}546%g;
 s%:6065%:${SIDE_PORT}065%g" $HOME/.side/config/app.toml
+```
 
 # set custom ports in config.toml file
 sed -i.bak -e "s%:26658%:${SIDE_PORT}658%g;
