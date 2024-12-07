@@ -55,11 +55,13 @@ wget -O $HOME/.side/config/genesis.json https://server-5.itrocket.net/testnet/si
 wget -O $HOME/.side/config/addrbook.json  https://server-5.itrocket.net/testnet/side/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="9c14080752bdfa33f4624f83cd155e2d3976e303@side-testnet-seed.itrocket.net:45656"
 PEERS="bbbf623474e377664673bde3256fc35a36ba0df1@side-testnet-peer.itrocket.net:45656,7ce65ae96e8b51e668fd4eb3c12b518225a5506f@95.216.243.177:26656,446e6f34c18de1a64d4d53014e5611e31d34466f@65.108.142.199:55656,3c907d62785b8cbcc21fb40f30a8157666a31176@88.198.70.23:26356,0c85cf29bd251fb4cf2c53943e36bd9d305ee27e@161.97.167.196:18656,b60a5456c46eb9d2a079fc88f7b3dd04cd826be5@93.159.130.38:36656,71d7a672c1d89f7f262049be03cbd28bbc58c2d3@45.129.147.247:36656,a2ed5f49a5370f5e7563fbcb471a7e9c0c1e8a98@213.239.198.181:656,be133ebd4d4bc4adfc0b06114a96d581a9290c98@212.90.120.2:26656,99df9c410d7269faf142ab72f1d5d8b22dd2d1ee@14.167.154.230:45656,c64da4e0565ff5651545b53548b933841577e84d@5.161.100.226:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.side/config/config.toml
+```
 
 # set custom ports in app.toml
 sed -i.bak -e "s%:1317%:${SIDE_PORT}317%g;
