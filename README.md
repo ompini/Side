@@ -98,7 +98,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.side/config/config.to
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.side/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/sided.service > /dev/null <<EOF
 [Unit]
 Description=Side node
@@ -113,6 +114,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 sided tendermint unsafe-reset-all --home $HOME/.side
