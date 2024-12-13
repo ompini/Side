@@ -126,7 +126,8 @@ if curl -s --head curl https://server-5.itrocket.net/testnet/side/side_2024-11-3
 fi
 ```
 
-# enable and start service
+**enable and start service***
+```
 sudo systemctl daemon-reload
 sudo systemctl enable sided
 sudo systemctl restart sided && sudo journalctl -u sided -f
@@ -134,6 +135,8 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/side/autoinstall/)
+```
+
 Create wallet
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 sided keys add $WALLET
