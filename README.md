@@ -138,8 +138,10 @@ source <(curl -s https://itrocket.net/api/testnet/side/autoinstall/)
 ```
 
 Create wallet
-# to create a new wallet, use the following command. don’t forget to save the mnemonic
+**to create a new wallet, use the following command. don’t forget to save the mnemonic**
+```
 sided keys add $WALLET
+```
 
 # to restore exexuting wallet, use the following command
 sided keys add $WALLET --recover
