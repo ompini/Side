@@ -188,20 +188,9 @@ while true; do
   sleep 5
 done
 ```
-Create validator
-Moniker
-Identity
-Details
-I love blockchain ❤️
-Amount, uside
-1000000
-Commission rate
-0.1
-Commission max rate
-0.2
-Commission max change rate
-0.01
-Website
+
+**Create validator**
+```
 sided tx staking create-validator \
 --amount 1000000uside \
 --from $WALLET \
@@ -217,6 +206,8 @@ sided tx staking create-validator \
 --chain-id sidechain-testnet-4 \
 --gas auto --gas-adjustment 1.5 --fees 1500uside \
 -y
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
